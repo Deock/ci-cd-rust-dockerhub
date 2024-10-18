@@ -7,6 +7,8 @@ WORKDIR /usr/src/redactr
 # Copy the current directory contents into the container at /usr/src/myapp
 COPY . .
 
+RUN cargo update
+
 # Compile the project
 RUN cargo build --release
 
